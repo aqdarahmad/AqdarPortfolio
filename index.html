@@ -7,104 +7,119 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 
-  /* Reset */
   * {
-    margin: 0; padding: 0; box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
+
   body {
     font-family: 'Poppins', sans-serif;
     background: #0f172a;
     color: #e0e0e0;
     line-height: 1.6;
   }
+
   a {
     color: #3b82f6;
     text-decoration: none;
     transition: color 0.3s ease;
   }
+
   a:hover {
     color: #60a5fa;
   }
-  /* Container */
+
   .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 3rem auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
+
   header {
     text-align: center;
     margin-bottom: 3rem;
   }
+
   header h1 {
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 3.2rem;
     letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
-    color: #e0e0e0;
+    color: #ffffff;
   }
+
   header p {
     font-weight: 300;
     font-size: 1.25rem;
     color: #94a3b8;
   }
-  /* Navigation */
+
   nav {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 2.5rem;
+    margin: 2rem 0 3rem;
+    flex-wrap: wrap;
   }
+
   nav a {
     font-weight: 600;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
   }
+
   nav a.active,
   nav a:hover {
     color: #3b82f6;
     border-bottom: 2px solid #3b82f6;
     padding-bottom: 0.25rem;
   }
-  /* Section Titles */
+
   h2 {
     font-weight: 600;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     border-bottom: 3px solid #3b82f6;
     display: inline-block;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.4rem;
     color: #e0e0e0;
   }
-  /* About */
+
+  section {
+    margin-bottom: 4rem;
+  }
+
   #about p {
     font-weight: 300;
     font-size: 1.1rem;
     color: #cbd5e1;
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto 2rem auto;
-    line-height: 1.5;
+    text-align: center;
   }
-  /* Skills */
+
   .skills-list {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
   }
+
   .skill {
     background: #1e293b;
-    padding: 10px 20px;
+    padding: 10px 22px;
     border-radius: 30px;
     font-weight: 600;
     color: #3b82f6;
     box-shadow: 0 0 10px #3b82f6aa;
     transition: transform 0.3s ease;
   }
+
   .skill:hover {
     transform: scale(1.1);
   }
-  /* Projects */
+
   .project {
     background: #1e293b;
     padding: 20px;
@@ -113,32 +128,37 @@
     box-shadow: 0 0 15px #3b82f6aa;
     transition: transform 0.3s ease;
   }
+
   .project:hover {
     transform: translateY(-5px);
   }
+
   .project h3 {
     color: #3b82f6;
     margin-bottom: 0.5rem;
   }
+
   .project p {
     color: #cbd5e1;
   }
-  /* Contact */
+
   #contact {
     text-align: center;
     margin-top: 3rem;
   }
+
   #contact a {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 12px;
     font-size: 1.5rem;
     color: #3b82f6;
     transition: color 0.3s ease;
   }
+
   #contact a:hover {
     color: #60a5fa;
   }
-  /* Footer */
+
   footer {
     text-align: center;
     padding: 1.5rem 0;
@@ -146,80 +166,106 @@
     font-size: 0.9rem;
     margin-top: 3rem;
   }
-  /* Responsive */
+
   @media (max-width: 600px) {
-    .skills-list {
-      justify-content: center;
+    nav {
+      gap: 1rem;
     }
   }
 </style>
 </head>
 <body>
+<div class="container">
+  <header>
+    <h1>Aqdar Ahmad</h1>
+    <p>Final Year Computer Engineering Student</p>
+  </header>
 
-  <div class="container">
-    <header>
-      <h1>Aqdar Ahmad</h1>
-      <p>Final Year Computer Engineering Student</p>
-    </header>
+  <nav>
+    <a href="#about" class="active">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <nav>
-      <a href="#about" class="active">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Passionate computer engineering student with a strong foundation in Flutter, JavaScript, and full-stack development. Experienced in building mobile apps, collaborating on real-world projects, and applying software testing principles. Eager to continuously grow, innovate, and contribute to impactful solutions.
+    </p>
+  </section>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a passionate computer engineering student specializing in Flutter, JavaScript, and software testing. I love creating beautiful and functional mobile applications and enjoy working with full-stack technologies. Always eager to learn and collaborate on exciting projects.
-      </p>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill">Flutter</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React.js</div>
+      <div class="skill">HTML & CSS</div>
+      <div class="skill">Python</div>
+      <div class="skill">Git & GitHub</div>
+    </div>
+  </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <div class="skill">Flutter</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">React.js</div>
-        <div class="skill">HTML & CSS</div>
-        <div class="skill">Python</div>
-        <div class="skill">Git & GitHub</div>
-      
-      </div>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Safe Pass Software System</h3>
+      <p>Real-time road checkpoint monitoring system with full documentation, planning, and interactive UI.</p>
+    </div>
+    <div class="project">
+      <h3>AAUP Robo Advisor Project</h3>
+      <p>AI-powered robot assistant designed to support students with academic guidance using voice and touch interaction.</p>
+    </div>
+    <div class="project">
+      <h3>Lost & Found App</h3>
+      <p>Flutter-based mobile app with Firebase backend, providing intuitive UI for reporting and searching items.</p>
+    </div>
+    <div class="project">
+      <h3>4-Bit ALU Simulation</h3>
+      <p>Simulated arithmetic logic unit demonstrating digital design principles using logic circuit tools.</p>
+    </div>
+    <div class="project">
+      <h3>Book Showcase Website</h3>
+      <p>Responsive frontend using HTML and CSS to display book listings in a clean, modern design.</p>
+    </div>
+  </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+  <section id="certifications">
+    <h2>Certifications & Courses</h2>
+    <div class="project">
+      <h3>PHP Course – The Hope International Edu</h3>
+      <p>Dec 2024 – Feb 2025</p>
+    </div>
+    <div class="project">
+      <h3>Self-Marketing Course – AAUP</h3>
+      <p>Apr 2025 – May 2025</p>
+    </div>
+    <div class="project">
+      <h3>Frontend Web Development Training – Asal Technologies</h3>
+      <p>40-hour hands-on training in HTML, CSS, and JavaScript for responsive and interactive design – Mar 2025</p>
+    </div>
+    <div class="project">
+      <h3>React.js Intensive Training – with Eng. Ibrahim</h3>
+      <p>200 hours of React training: components, hooks, routing, and state – Mar 2025 – Jul 2025</p>
+    </div>
+    <div class="project">
+      <h3>MERN Stack Training – Under Eng. Safwat</h3>
+      <p>Ongoing project-based training in MongoDB, Express.js, React.js, and Node.js – Jul 2025 – Present</p>
+    </div>
+  </section>
 
-      <div class="project">
-        <h3>Safe Pass Software System</h3>
-        <p>Developed real-time checkpoint status updates with detailed documentation and planning.</p>
-      </div>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <a href="mailto:a.abusufyan@student.aaup.edu" aria-label="Email">📧</a>
+    <a href="https://github.com/aqdarahmad" target="_blank" aria-label="GitHub">🐙</a>
+    <a href="https://www.linkedin.com/in/aqdarahmad" target="_blank" aria-label="LinkedIn">💼</a>
+  </section>
 
-      <div class="project">
-        <h3>AAUP Robo Advisor Project</h3>
-        <p>Managed project planning and requirement analysis for an interactive robot advisor system.</p>
-      </div>
-
-      <div class="project">
-        <h3>Lost & Found App (Flutter)</h3>
-        <p>Designed and implemented UI with Dart and integrated Firebase backend.</p>
-      </div>
-
-      <div class="project">
-        <h3>4-Bit ALU Simulation</h3>
-        <p>Created a digital arithmetic logic unit simulation using logic design tools.</p>
-      </div>
-
-      <div class="project">
-        <h3>Book Showcase Website</h3>
-        <p>Built a responsive website using modern HTML and CSS techniques.</p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <a href="mailto:a.abusufyan@student.aaup.edu" aria-label="Email"><svg style="vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#3b82f6" viewBox="0 0 24 24"><path d="M12 13.065L2 6v12h20V6l-10 7.065zM12 11L2 4h20L12 11z"/></svg></a>
-      <a href="https://github.com/aqdarahmad" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg style="vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#3b82f6" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12c0 5.302 3.438 9.8 8.205 11.385.6.111.82-.26.82-.577 0-.285-.011-1.04-.017-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.386-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.776.419-1.304.762-1.604-2.665-.303-5.466-1.334-5.466-5.933 0-1.31.467-2.38 1.235-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.323 3.3 1.23a11.53 11.53 0 013.003-.404c1.019.005 2.045.138 3.003.404 2.289-1.554 3.296-1.23 3.296-1.23.654 1.653.243 2.873.119 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.803 5.625-5.475 5.922.43.372.814 1.102.814 2.222 0 1.606-.015 2.9-.015 3.293 0 .32.216.694.825.576C20.565 21.796 24 17.297 24 12c0-6.629-5.371-12-12-12z"/></svg></a>
-      <a href="https://www.linkedin.com/in/aqdarahmad" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg style="vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#3b82f6" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 5.08 3.88 6.25 2.5 6.25S0 5.08 0 3.5 1.1.75 2.48.75 4.98 1.93 4.98 3.5zM.25 8h4
+  <footer>
+    &copy; 2025 Aqdar Ahmad. All rights reserved.
+  </footer>
+</div>
+</body>
+</html>
